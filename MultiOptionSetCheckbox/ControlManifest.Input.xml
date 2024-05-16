@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+  <control namespace="WareTec" constructor="MultiOptionsetCheckbox" version="0.0.1"
+    display-name-key="Multi Optionset Checkbox"
+    description-key="Multi Optionset Checkbox" control-type="standard">
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <property name="MultiSelectColumn" display-name-key="Multi Select OptionSet Column"
+      description-key="Select a Multi Optionset Column" of-type="MultiSelectOptionSet"
+      usage="bound" required="true" />
+    <property name="OrderBy" default-value="default" display-name-key="Order by"
+      description-key="Select the order of the OptionsetValues" of-type="Enum" usage="input">
+      <value
+        name="Default"
+        display-name-key="Default">default</value>
+      <value
+        name="OptionSetValue"
+        display-name-key="OptionSetValue">optionsetvalue</value>
+      <value
+        name="Alphabetical"
+        display-name-key="Alphabetical">alphabetical</value>
+    </property>
+    <property name="Direction" default-value="asc" display-name-key="Direction"
+      description-key="Sort the values ascending or descending" of-type="Enum" usage="input">
+      <value
+        name="Ascending"
+        display-name-key="Ascending">asc</value>
+      <value
+        name="Descending"
+        display-name-key="Descending">desc</value>
+    </property>
+    <property name="Orientation" display-name-key="Orientation" default-value="column"
+      description-key="Select the grid direction" of-type="Enum" usage="input">
+      <value name="Row" display-name-key="Row">row</value>
+      <value name="Column" display-name-key="Column">column</value>
+    </property>
+    <property name="Columns" display-name-key="Columns" default-value="1"
+      description-key="Set the amount of columns" of-type="Whole.None" required="false" usage="input" />
+      <property name="Rows" display-name-key="Rows"
+      description-key="Set the amount of rows" of-type="Whole.None" required="false" usage="input" />
+    <property name="Startat" display-name-key="Start columns/rows at"
+      description-key="Set the starting characters at which a new column/row should start. Sorts the values alphabetically and overwrites the column-parameter. Example: A;F;S"
+      of-type="SingleLine.Text" usage="input"></property>
+    <resources>
+      <code path="index.ts" order="1" />
+      <css path="css/MultiOptionSetCheckbox.css" order="1" />
+    </resources>
+  </control>
+</manifest>

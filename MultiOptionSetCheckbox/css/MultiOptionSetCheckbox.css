@@ -1,0 +1,25 @@
+.checkbox-container > input {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox-container > input:hover{ 
+	filter: brightness(1.25);
+}
+
+.checkbox-container > label:hover{ 
+	filter: brightness(1.25);
+}
+.checkbox-container > label {
+  display: inline;
+  font-size: 14px;
+  cursor: pointer;
+  vertical-align: middle;
+  font-family: "Segoe UI";
+}
